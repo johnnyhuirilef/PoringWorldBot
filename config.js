@@ -28,14 +28,14 @@ config.limitreqs = 30;
 
 // discord id of the owner
 // make sure to change this to your discord id if you're hosting this bot yourself
-config.owner = "161248916384251904";
+config.owner = process.env.OWNER_ID;
 // base permission level that owner gets
 config.ownerperm = 6969;
 // base permission level that someone who added the bot will get
 config.startperm = 9;
 
 // blacklist :(
-config.blacklistedguild = ["265757905435885568"];
-config.blacklisteduser = ["264104948072054785"];
+config.blacklistedguild = [];
+config.blacklisteduser = [];
 
 module.exports = config;

@@ -1,0 +1,15 @@
+version: "3.6"
+services:
+  app:
+    image: node:14.15
+    volumes:
+      - ./:/app
+      - pwb-data:/ohsnap.db
+      - pwb-data:/backupdbs
+    command: bash -c "yarn && yarn start"
+    working_dir: /app
+    environment:
+      - DISCORD_TOKEN
+      - OWNER_ID
+volumes: 
+  pwb-data:

@@ -1,7 +1,5 @@
-//var Discord = require('discord.io');
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-var auth = require('./auth.json');
 var parsefuncs = require('./parse.js');
 var config = require('./config.js');
 var commands = require('./commands.js');
@@ -305,5 +303,4 @@ bot.on("rateLimit", (something) => {
   console.log("ratelimit");
   console.log(something);
 });
-
-bot.login(auth.token);
+bot.login(process.env.DISCORD_TOKEN);
